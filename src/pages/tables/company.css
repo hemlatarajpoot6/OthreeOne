@@ -3,6 +3,7 @@
 }
 .btn-conpany{
     background: linear-gradient(90deg, #064A99,#01A3C5) !important;
+    border: none !important;
 }
 .select-background{
 background-color: #EEEEEE;
@@ -31,12 +32,32 @@ background-color: #EEEEEE;
     position: absolute;
     top: 0;
     right: 52px;
-    padding: 9px;
+    padding: 3px 7px;
     border-radius: 57%;
     background-color:#ECECECB8;
-    ;
     margin-top: 7px;
+}
+.text-edit svg{
+    vertical-align: initial;
 }
 .text-edit:hover{
     color: #08467F;
 }
+.dropdown-arrow svg{
+    /* margin: -2px 6px; */
+    font-size: 12px;
+    vertical-align: initial;
+}
+.add-company{
+    padding: 0px 0.5rem 0px 0.5rem!important;
+}
+.add-company svg{
+    vertical-align: initial;
+}
+.btn{
+    padding: 0;
+}
+.highactive.btn-secondary:focus {
+    background: linear-gradient(90deg, #064A99,#01A3C5) !important;
+    color: #fff !important;
+  }

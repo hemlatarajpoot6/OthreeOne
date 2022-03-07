@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Row, Col, Card, CardBody, Input, UncontrolledDropdown, Button, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
@@ -6,7 +6,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 // import { BsToggleOn } from "react-icons/BsToggleOn";
 // import * as FeatherIcon from 'react-feather';
-import { FormOutlined, DeleteOutlined, PlusOutlined, DownloadOutlined, FilterOutlined } from '@ant-design/icons';
+import { FormOutlined, DeleteOutlined, PlusOutlined, DownloadOutlined, FilterOutlined, DownOutlined } from '@ant-design/icons';
 // import { Button } from 'antd';
 // import { MDBCol } from "mdbreact";
 import "./company.css";
@@ -136,56 +136,105 @@ const columns = [
     {
         dataField: 'name',
         text: <>
-            <p className="text-center">Name</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Name<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border corporate" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
     {
         dataField: 'email',
         text: <>
-            <p className="text-center">Email</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Email<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border corporate" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
     {
         dataField: 'phone',
         text: <>
-            <p className="text-center">Phone</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Phone<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border corporate" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
     {
         dataField: 'role',
         text: <>
-            <p className="text-center">Role</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Role<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border corporate" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
     {
         dataField: 'permission',
         text: <>
-            <p className="text-center">Permission</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Permission<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border corporate" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
     {
         dataField: 'status',
         text: <>
-            <p className="text-center">Status</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Status<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border invisible" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
     {
         dataField: 'action',
         text: <>
-            <p className="text-center">Action</p>
-            <input className="form-control py-2 border-right-0 border" type="search" placeholder='Search' id="example-search-input" />
+        <UncontrolledDropdown color="light" light expand="lg" setActiveFromChild>
+          <DropdownToggle tag="a" className="nav-link text-muted mb-2" caret>
+          Action<DownOutlined className='dropdown-arrow ml-2' />
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem tag="a" href="/blah" active>Link</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+            <input className="form-control py-2 border-right-0 border invisible" type="search" placeholder='Search' id="example-search-input" />
         </>,
         sort: true,
     },
@@ -216,7 +265,7 @@ const CustomToggleList = ({
     <>
 
         <UncontrolledDropdown>
-            <DropdownToggle tag="button" className="btn bg-white btn-white">Filters<FilterOutlined className='p-2' /></DropdownToggle>
+            <DropdownToggle tag="button" className="highactive btn bg-white btn-white border border-dark pl-2">Filters<FilterOutlined className='p-2' /></DropdownToggle>
             <DropdownMenu>
                 {columns.map(column => ({
                     ...column,
@@ -225,7 +274,7 @@ const CustomToggleList = ({
                     .map(column => (
                         <DropdownItem key={column.dataField} onClick={() => onColumnToggle(column.dataField)}>
                             {column.toggle && <i className='uil uil-check'></i>}
-                            <span className="ml-2">{column.text}</span>
+                            <span className="ml-2">{column.dataField}</span>
                         </DropdownItem>
                     ))
                 }
@@ -239,6 +288,19 @@ const TableWithColumnToggle = () => {
     // const onAddcompany=()=>{
     //     history.push('/tables/basic')
     // }
+
+    const [isActive, setActive] = useState(false);
+
+    const toggleClass = () => {
+        setActive(!isActive);
+        console.log("color....", isActive)
+    };
+
+    function rowClassNameFormat(row, rowIdx) {
+        // row is whole row object
+        // rowIdx is index of row
+        return { backgroundColor: rowIdx % 2 === 0 ? 'red' : 'blue' };
+      }
 
     return (
         <Card>
@@ -256,14 +318,15 @@ const TableWithColumnToggle = () => {
                             <Row>
                                 <Col md={12}>
                                     <div className='d-flex float-right'>
-                                        <Button className='btn-conpany text-white text-center'><Link to='/tables/basic' className='text-white'>Add Company <PlusOutlined className='p-2' /></Link></Button>
-                                        <Button className='btn btn-company mx-3 bg-white text-dark text-center'>Export CSV<DownloadOutlined className='p-2' /></Button>
+                                        <Button className={isActive ? 'highactive' : 'btn-conpany text-white text-center p-0'} onClick={toggleClass}><Link to='/tables/basic' className='text-white pl-2'>Add Company <PlusOutlined className='add-company' /></Link></Button>
+                                        <Button className='highactive btn mx-3 bg-white text-dark text-center'><Link className='text-dark pl-2'>Export CSV<DownloadOutlined className='add-company' /></Link></Button>
                                         <CustomToggleList {...props.columnToggleProps} />
                                     </div>
                                 </Col>
                             </Row>
 
                             <BootstrapTable
+                            trStyle={rowClassNameFormat}
                                 {...props.baseProps}
                                 bordered={false}
                                 pagination={paginationFactory({ sizePerPage: 5, sizePerPageRenderer: sizePerPageRenderer, sizePerPageList: [{ text: '5', value: 5, }, { text: '10', value: 10 }, { text: '25', value: 25 }, { text: 'All', value: records.length }] })}

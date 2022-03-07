@@ -101,7 +101,7 @@ class FileUploader extends Component {
                                                 </Col>
                                             )}
                                             <Col className="pl-0">
-                                                <Link to="#" className="text-muted font-weight-bold">
+                                                <Link to="/#" className="text-muted font-weight-bold">
                                                     {f.name}
                                                 </Link>
                                                 <p className="mb-0">

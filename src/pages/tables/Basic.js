@@ -11,10 +11,14 @@ const AddCompany = () => {
     // const position = [51.505, -0.09]
 
 
-    let [num, setNum] = useState(0);
+    let [num, setNum] = useState(12);
+    let [building, setBuilding] = useState(12);
+    let [wings, setWings] = useState(12);
+    let [floor, setFloor] = useState(12);
+    let [room, setRoom] = useState(12);
 
     let incNum = () => {
-        if (num < 10) {
+        if (num < 20) {
             setNum(Number(num) + 1);
         }
     };
@@ -25,6 +29,59 @@ const AddCompany = () => {
     }
     let handleChange = (e) => {
         setNum(e.target.value);
+    }
+
+    let buildinChange =(e)=>{
+        setBuilding(e.target.value);
+    }
+    let buildingIncrement = () =>{
+        if (building < 20) {
+            setBuilding(Number(building) + 1);
+        }
+    };
+    let buildingDecrement = () =>{
+        if (building > 0) {
+            setBuilding(building - 1);
+        }
+    }
+    let wingsChange =(e)=>{
+        setWings(e.target.value);
+    }
+    let wingsIncrement = () =>{
+        if (wings < 20) {
+            setWings(Number(wings) + 1);
+        }
+    };
+    let wingsDecrement = () =>{
+        if (wings > 0) {
+            setWings(wings - 1);
+        }
+    }
+    let floorChange =(e)=>{
+        setFloor(e.target.value);
+    }
+    let floorIncrement = () =>{
+        if (floor < 20) {
+            setFloor(Number(floor) + 1);
+        }
+    };
+    let floorDecrement = () =>{
+        if (floor > 0) {
+            setFloor(floor - 1);
+        }
+    }
+    let roomChange =(e)=>{
+        setRoom(e.target.value);
+    }
+    let roomIncrement = () =>{
+        if (room < 20) {
+            setRoom(Number(room) + 1);
+        }
+    };
+    let roomDecrement = () =>{
+        if (room > 0) {
+            setRoom(room - 1);
+        }
     }
 
     // function onChange(date, dateString) {
@@ -121,7 +178,7 @@ const AddCompany = () => {
                                     <Input
                                         className='select-background'
                                         type="date"
-                                        dateFormat="dd/mm/yyyy"
+                                        dateformat="dd/mm/yyyy"
                                         placeholder='Select'
                                         defaultValue="Select"
                                     />
@@ -276,13 +333,13 @@ const AddCompany = () => {
                                 <InputGroup>
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom-minus">
-                                            <MinusCircleOutlined onClick={decNum} />
+                                            <MinusCircleOutlined onClick={buildingDecrement} />
                                         </span>
                                     </InputGroupAddon>
-                                    <input type="text" class="form-control text-center" value={num} onChange={handleChange} />
+                                    <input type="text" class="form-control text-center" value={building} onChange={buildinChange} />
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom">
-                                            <PlusCircleOutlined onClick={incNum} />
+                                            <PlusCircleOutlined onClick={buildingIncrement} />
                                         </span>
                                     </InputGroupAddon>
                                 </InputGroup>
@@ -292,13 +349,13 @@ const AddCompany = () => {
                                 <InputGroup>
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom-minus">
-                                            <MinusCircleOutlined onClick={decNum} />
+                                            <MinusCircleOutlined onClick={wingsDecrement} />
                                         </span>
                                     </InputGroupAddon>
-                                    <input type="text" class="form-control text-center" value={num} onChange={handleChange} />
+                                    <input type="text" class="form-control text-center" value={wings} onChange={wingsChange} />
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom">
-                                            <PlusCircleOutlined onClick={incNum} />
+                                            <PlusCircleOutlined onClick={wingsIncrement} />
                                         </span>
                                     </InputGroupAddon>
                                 </InputGroup>
@@ -308,13 +365,13 @@ const AddCompany = () => {
                                 <InputGroup>
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom-minus">
-                                            <MinusCircleOutlined onClick={decNum} />
+                                            <MinusCircleOutlined onClick={floorDecrement} />
                                         </span>
                                     </InputGroupAddon>
-                                    <input type="text" class="form-control text-center" value={num} onChange={handleChange} />
+                                    <input type="text" class="form-control text-center" value={floor} onChange={floorChange} />
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom">
-                                            <PlusCircleOutlined onClick={incNum} />
+                                            <PlusCircleOutlined onClick={floorIncrement} />
                                         </span>
                                     </InputGroupAddon>
                                 </InputGroup>
@@ -324,20 +381,20 @@ const AddCompany = () => {
                                 <InputGroup>
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom-minus">
-                                            <MinusCircleOutlined onClick={decNum} />
+                                            <MinusCircleOutlined onClick={roomDecrement} />
                                         </span>
                                     </InputGroupAddon>
-                                    <input type="text" class="form-control text-center" value={num} onChange={handleChange} />
+                                    <input type="text" class="form-control text-center" value={room} onChange={roomChange} />
                                     <InputGroupAddon addonType="prepend">
                                         <span className="input-group-text bg-white hover-zoom">
-                                            <PlusCircleOutlined onClick={incNum} />
+                                            <PlusCircleOutlined onClick={roomIncrement} />
                                         </span>
                                     </InputGroupAddon>
                                 </InputGroup>
                             </Col>
                         </Row>
                         <div className='mt-5 float-right'>
-                            <Button className='btn-conpany px-4 font-weight-bold'>Submit</Button>
+                            <Button className='btn-conpany px-4 py-2 font-weight-bold'>Submit</Button>
                         </div>
                     </div>
                 </CardBody>

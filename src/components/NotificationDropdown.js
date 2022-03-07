@@ -100,7 +100,7 @@ text ever since the 1500s<br></br>
                             })} */}
                         </PerfectScrollbar>
 
-                        <Link className="dropdown-item text-center text-primary notify-item notify-all border-top">View All</Link>
+                        <Link to="/#" className="dropdown-item text-center text-primary notify-item notify-all border-top">View All</Link>
                     </div>
                 </DropdownMenu>
             </Dropdown>
